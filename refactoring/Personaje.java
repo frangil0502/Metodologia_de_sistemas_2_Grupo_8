@@ -1,5 +1,4 @@
 package refactoring;
-
 import refactoring.TipoHabilidad;
 
 
@@ -17,19 +16,7 @@ public class Personaje {
         this.tipoHabilidad = tipoHabilidad;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public int getDaño() {
-        return daño;
-    }
-
-    public TipoHabilidad getTipoHabilidad() {
-        return this.tipoHabilidad;
-    }
-
-    public Personaje personajeConMasDaño(Personaje[] personajes) {
+    static Personaje personajeConMasDaño(Personaje[] personajes) {
 
         Personaje temp = null;
         double max = 0;
@@ -43,6 +30,18 @@ public class Personaje {
         }
 
         return temp;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getDaño() {
+        return daño;
+    }
+
+    public TipoHabilidad getTipoHabilidad() {
+        return this.tipoHabilidad;
     }
 
     public void imprimirInfo() {
